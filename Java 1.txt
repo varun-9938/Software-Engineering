@@ -1,0 +1,145 @@
+package com.th;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        //int num1=10,num2=20;
+        Scanner sc = new Scanner(System.in);
+//        System.out.println("enter two numbers");
+//        int num1= sc.nextInt();
+//        int num2=sc.nextInt();
+//        int sum = num1+num2;
+//        System.out.println("sum = "+sum);
+//        System.out.println("enter a number");
+//        int n= sc.nextInt();
+//        if (n%2==0)
+//            System.out.println(n+"is even");
+//        else
+//            System.out.println(n+" is odd");
+//        System.out.println("largest of 3 numbers using ternary operator");
+//        System.out.println("enter a no");
+//        int n1 = sc.nextInt();
+//        double n2 = sc.nextDouble();
+//        long n3 = sc.nextLong();
+//        double l1 = (n1>n2)?n1:n2;
+//        double l2 = (l1>n3)?l1:n3;
+//        System.out.println("  largest is "+l2);
+//        float f1 = 13.33f;
+//        double d1 = f1;
+//        float f2 = (float)d1;
+//        int i1 = (int)d1;
+//        System.out.println("float" +f2);
+//        System.out.println("int" +i1);
+//        System.out.println("double" +d1);
+//        int i=15;
+//        int a1 = ++i;
+//        System.out.println(i+" "+a1);
+//        int j=10;
+//        int a2 = j++;
+//        System.out.println(j+" "+a2);
+//        System.out.println("enter the no to be reversed");
+//        int num = sc.nextInt();
+//        int revnum=reverseNum(num);
+//        System.out.println("reverse of" +num+ "is: " +revnum);
+//        System.out.println("enter a no");
+//        int num = sc.nextInt();
+//        if (isprime(num))
+//            System.out.println("is a prime no");
+//        else
+//            System.out.println("not a prime no");
+//        System.out.println("enter a no:");
+//        int num = sc.nextInt();
+//        long fact = factorial(num);
+//        System.out.println("factorial of "+num+ " is " +fact);
+        System.out.println("enter a month no");
+        int mno = sc.nextInt();
+        string msg = tofinddays(mno);
+        System.out.println("the month no "+mno+ " " +msg+);
+
+
+    }
+    public static int reverseNum(int n)
+    {
+        int rem=0,revnum=0;
+        while (n!=0){
+            rem = n%10;
+            revnum=revnum*10+rem;
+            n = n/10;
+        }
+        return revnum;
+    }
+    public static boolean isprime(int num)
+    {
+        boolean flag = true;
+        for (int i=2;i<=num/2;i++)
+        {
+            if(num%i==0){
+                flag=false;
+                break;
+            }
+
+        }
+        return (flag);
+    }
+    public static long factorial(int num)
+    {
+        long f=1;
+        for(int i=1;i<=num;i++)
+            f*=i;
+        return f;
+    }
+    
+
+
+
+        }
+
+
+    }
+
+
+}
+
+
+
+
+package com.torryharris;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        int[] arr={10,20,30,40,50};
+//        System.out.println("printing the elemrnts : ");
+//        for(int i=0;i<arr.length;i++)
+//        {
+//            System.out.print(arr[i]+"   ");
+//        }
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the no of elements:");
+        int n=sc.nextInt();
+        int[] arr = new int[n];
+        int sum=0;
+        System.out.println("enter the array elements");
+        for (int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+            sum+=arr[i];
+        }
+        System.out.println("printing the elements in the array");
+        for (int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+"  ");
+
+        }
+        System.out.println("\nsum of array: "+sum);
+
+
+    }
+}
