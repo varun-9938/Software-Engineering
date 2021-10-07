@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Tags</title>
+</head>
+<body>
+<form action="/src/main/webapp/index1.html" method="post"</form>
+    <label>First name:</label>
+    <input type="text" name="fname" id="fname"><br>
+    <label>Last name:</label>
+    <input type="text" name="lname" id="lname"><br>
+    <label>Password:</label>
+    <input type="password" name="pward" id="pward"><br>
+    <label>Address:</label>
+    <textarea rows="5" cols="15" name="address"> </textarea><br>
+    <select name="stats" id="stats">
+        <option value="karnataka" >karnataka</option>
+        <option value="andra pradesh" >andra pradesh</option>
+        <option value="kerla" >kerla</option>
+        <option value="Temilnadu" >Tamilnadu</option>
+    </select>
+    <input type="radio" id="fruit" name="fruit" value="apple">
+    <label for="fruit"> apple</label>
+    <br>
+    <br>
+    <input type="checkbox" id="vaccination" name="vaccination" value="1">
+    <label for="vaccination">1st dose</label>
+    <input type="checkbox" id="2vaccination" name="2vaccination" value="2">
+    <label for="2vaccination">2nd dose</label>
+    <br>
+    <br>
+    <label for="doj">join date</label>
+    <input type="date" name="doj" id="doj">
+    <br>
+    <br>
+    <label for="qty">quantity(1-5)</label>
+    <input type="number" id="qty" name="qty" min="1" max="5">
+    <br>
+    <br>
+    <label for="file">select files from local drive</label>
+    <input type="file" id="file" name="file" multiple>
+    <br>
+    <br>
+    <label for="email">enter your email</label>
+    <input type="email" id="email" name="email"><br>
+    <input type="submit" value="submit">
+</body>
+</html>
