@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reverseno</title>
+</head>
+<body>
+<p id="demo"></p>
+<script type="text/javascript">
+    var n=123;
+    var rn=0;
+    while(n!=0)
+    {
+        let r=n%10;
+        rn=(rn*10)+r;
+        n=parseInt(n/10);
+    }
+    document.write(rn);
+</script>
+</body>
+</html>

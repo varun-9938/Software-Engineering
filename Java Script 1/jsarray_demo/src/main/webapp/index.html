@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsarray</title>
+    <script type="text/javascript">
+        myarray = new Array("wind","water","fire","sky");
+        urarray = new Array("car","bike","train","boat");
+        document.write(myarray+"<br>");
+        for(i in myarray)
+        {
+            document.write("array element is "+myarray[i]+"<br>");
+        }
+        document.write(myarray.join()+"<br>");
+        document.write(myarray.concat(urarray)+"<br>");
+        document.write(myarray.pop()+"<br>");
+        document.write(myarray.shift()+"<br>");
+        document.write(myarray.unshift("ocean","strom")+"<br>");
+        document.write(myarray+"<br>");
+        document.write(myarray.sort()+"<br>");
+        document.write(myarray.reverse()+"<br>");
+        subArray=myarray.slice(1,3);
+        document.write(subArray+"<br>");
+        document.write(myarray+"<br>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>
