@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Call back function</title>
+</head>
+<body>
+<p id="res"></p>
+
+</body>
+<script>
+    function display(something)
+    {
+        document.getElementById("res").innerHTML=something;
+    }
+    function findmax(n1,n2,mycallback)
+    {
+        let max=0;
+        if(n1>n2)
+        {
+            max=n1;
+        }
+        else
+        {
+            max=n2;
+        }
+        mycallback(max);
+
+    }
+findmax(15,5,display);
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Input</title>
+</head>
+<body>
+<input type="text" name="array[]" value=""/><br>
+<input type="text" name="array[]" value=""/><br>
+<input type="text" name="array[]" value=""/><br>
+<input type="text" name="array[]" value=""/><br>
+<input type="text" name="array[]" value=""/><br>
+<button type="button" id="button1" onclick="printandsum()">click here</button>
+
+
+<p id="ans"></p>
+<p id="display"></p>
+</body>
+<script>
+function printandsum()
+{
+    var inputarr = document.getElementsByName("array[]");
+    let sum=0;
+    let k = "Array Elements:";
+    for (let i=0;i<inputarr.length;i++)
+    {
+        let ele = parseInt(inputarr[i].value);
+        sum+=ele;
+        k=k+"["+i+"]: "+ele+"<br>";
+    }
+    document.getElementById("ans").innerHTML=sum;
+    document.getElementById("display").innerHTML=k;
+}
+</script>
+</html>

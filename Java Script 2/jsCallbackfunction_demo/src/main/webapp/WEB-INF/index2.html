@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scope of Variables</title>
+  <script>
+        var a=10;   //scope is global
+        myFun();
+        function myFun()
+        {
+            let a = 20;
+            document.write(a*a+"<br>");
+        }
+        document.write(a*a+"<br>")
+    </script>
+</head>
+<body>
+</body>
+</html>
