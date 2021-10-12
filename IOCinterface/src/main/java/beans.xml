@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+
+    <bean id="HDFC" class="org.thbs.HDFC" />
+    <bean id="ICIC" class="org.thbs.ICIC" />
+    <bean id="client1" class="org.thbs.THclient" scope="prototype" autowire="no">
+        <constructor-arg ref="HDFC"/>
+    </bean>
+    <bean id="client2" class="org.thbs.THclient" scope="prototype" autowire="no">
+        <constructor-arg ref="ICIC"/>
+    </bean>
+
+</beans>
