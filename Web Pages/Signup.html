@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <style>
+.signup{
+text-align:center;
+margin-top:10%;
+background-color:white;
+margin-left:33%;
+margin-right:33%;
+opacity:0.7;
+border-radius: 15px;
+            }
+
+body{
+background-image:url('rail.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size:cover;
+
+}
+
+.header{
+display:flex;
+background-color:white;
+height:60px;
+border-radius: 15px;
+    opacity:0.7;
+
+}
+.div1{
+width:33%;
+}
+    </style>
+</head>
+<body>
+<section class="header">
+    <div class="div1">
+   <img src="download.png" width="50px">
+    </div>
+    <div class="div1"><h2 style="font-size:30px; color:blue;"> Indian Railways</h2></div>
+    <div class="div1">
+   <p style="float:right;"> <img src="irctc.png" width="50px"></p>
+    </div>
+</section>
+<div class="signup" style="font-weight:bold;">
+    <form action="Login.html">
+        <center>
+        <label>Enter your mail id:</label>
+        <input type="email" name="mailid" id="mailid" required><br><br>
+        <label>Enter User Name:</label>
+        <input type="text" name="fname" id="fname" required><br><br>
+        <label>Enter New Password:</label>
+        <input type="password" name="pname" id="pname" required><br><br>
+        <label>Confirm Password:</label>
+        <input type="password" name="cname" id="cname" required><br><br>
+        <a href="Login.html">
+            <input type="submit" value="Sign up">
+        </a>
+        </center>
+    </form>
+</div>
+</body>
+</html>
