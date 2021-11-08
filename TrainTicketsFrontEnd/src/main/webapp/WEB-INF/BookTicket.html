@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ticketbooking</title>
+    <link rel="stylesheet" href="Booking.css"/>
+<style>
+    .header{
+    display:flex;
+    background-color:white;
+    height:60px;
+    margin-bottom:50px;
+    border-radius: 15px;
+    opacity:0.7;
+
+    }
+    .divs{
+    width:33%;
+    }
+    </style>
+</head>
+<body>
+<section class="header">
+    <div class="divs">
+        <img src="download.png" width="50px">
+    </div>
+    <div class="divs"><h2 style="font-size:30px; color:blue;">&emsp;&emsp;&emsp;&emsp;Indian Railways</h2></div>
+    <div class="divs">
+        <p style="float:right;"> <img src="irctc.png" width="50px"></p>
+    </div>
+</section>
+<section class="containers">
+    <div class="div1">
+        <h2 style="text-align:center; color:navy;"> Book ticket</h2>
+        <label> select train number</label>
+
+        <select name="train_no" id="train_no" required>
+            <option value="1001" >1001</option>
+            <option value="1002" >1002</option>
+            <option value="1003" >1003</option>
+            <option value="1004" >1004</option>
+            <option value="1005" >1005</option>
+            <option value="1006" >1006</option>
+        </select>
+        <a href="ViewTrain.html"> View Trains</a><br>
+
+        <label> Travel Date</label>
+        <input type="date" name="date" id="date"><br>
+        <label>Number of passengers: (max. 10)</label>
+       <input type="number" id="member" name="member" value=""><br/>
+<a href="#" id="filldetails" onclick="addFields()">Fill Details</a>
+        <p id="container"></p>
+<script type='text/javascript' >
+    function addFields(){
+        // Number of inputs to create
+        var number = document.getElementById("member").value;
+        // Container <div> where dynamic content will be placed
+        var container = document.getElementById("container");
+        // Clear previous contents of the container
+        while (container.hasChildNodes()) {
+            container.removeChild(container.lastChild);
+        }
+        if(number<=10)
+        {
+        for (i=0;i<number;i++){
+            // Append a node with a random text
+            container.appendChild(document.createTextNode("Passenger " + (i+1)));
+            container.appendChild(document.createElement("br"));
+            // Create an <input> element, set its type and name attributes
+             container.appendChild(document.createTextNode("name"));
+            var input = document.createElement("input");
+            input.type = "text";
+            input.name = "name" + i;
+            container.appendChild(input);
+            container.appendChild(document.createElement("br"));
+            container.appendChild(document.createTextNode("age\t"));
+            var input1 = document.createElement("input");
+            input1.type = "text";
+            input1.name = "age" + i;
+            container.appendChild(input1);
+            container.appendChild(document.createElement("br"));
+            container.appendChild(document.createTextNode("gender"));
+            var input2 = document.createElement("input");
+            input2.type = "text";
+            input2.name = "gender" + i;
+            container.appendChild(input2);
+         // Append a line break
+            container.appendChild(document.createElement("br"));
+        }
+        }
+        else{
+        alert("please select passengers below 10");
+        }
+        let btn = document.createElement("button");
+     btn.innerHTML = "SUBMIT";
+      btn.onclick = function () {
+      alert("Confirmed ");
+      window.location.replace("Succes.html");
+};
+document.body.appendChild(btn);
+    }
+</script>
+    </div>
+
+    <div class="div2">
+        <h1> INDIAN RAILWAYS</h1>
+        <h3>  Safety | Security | Punctuality | </h3>
+
+    </div>
+</section>
+
+
+</body>
+</html>
